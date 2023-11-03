@@ -1,0 +1,50 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        .centered-text {
+            text-align: center;
+            line-height: 5px; /* Center the text vertically (relative to the viewport height) */
+            font-family: arial, sans-serif;
+            font-size:xx-large;
+        }
+
+        .english{        
+            background-color: #dbf3c1ca;        
+            color:#64ae20;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            border-radius: 910px;
+            margin-left: -30px;
+            margin-top: 50px;
+        }
+
+        .Hindi{        
+            background-color: #dbf3c1ca;        
+            color:#64ae20;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            border-radius: 510px;
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        
+
+    </style>
+</head>
+<body style="background-color: #dbf3c1ca;">
+  <div class="centered-text">
+    <h1>Tutorial</h1>
+    <p>Choose your language or click on next button</p>
+    <button class="styled-button english"><a href="http://127.0.0.1:5500/eng.html">English</a></button>
+    <button class="styled-button Hindi"><a href="http://127.0.0.1:5500/hindi.html">हिंदी</a></button><br>
+    
+   
+  </div>
+</body>
+</html>
