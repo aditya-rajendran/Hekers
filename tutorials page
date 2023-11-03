@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Watch tutorials</title>
+  </head>
+  <body>
+    <h1>Watch tutorials</h1>
+    <p>Choose your language or click on next to skip tutorial.</p>
+    <button class="styled-button english"><a href="http://127.0.0.1:5500/eng.html">English</a></button>
+    <button class="styled-button हिंदी"><a href="http://127.0.0.1:5500/hindi.html">हिंदी</a></button>
+    <a href="https://webxr.run/GlbnyDvV3yWLm" target="_blank">Next</a>
+  </body>
+</html>

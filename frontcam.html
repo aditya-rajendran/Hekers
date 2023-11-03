@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Front and Back Camera</title>
+  </head>
+  <body>
+    <video id="webcam" autoplay></video>
+    <button id="startButton">Start Webcam</button>
+    <button id="switchCameraButton">Switch Camera</button>
+
+    <script>
+      const video = document.getElementById('webcam');
+      let stream;
+      let currentCamera = 'user'; // 'user' for front camera, 'environment' for back camera
+
+      async function startWebcam() {
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: currentCamera } });
+          video.srcObject = stream;
+        } catch (error) {
+          console.error('Error accessing the camera:', error);
+        }
+      }
+
+      function switchCamera() {
+        if (currentCamera === 'user') {
+          currentCamera = 'environment';
+        } else {
+          currentCamera = 'user';
+        }
+
+        // Stop the current stream
+        if (stream) {
+          stream.getTracks().forEach((track) => track.stop());
+        }
+
+        // Start the new camera
+        startWebcam();
+      }
+
+      document.getElementById('startButton').addEventListener('click', startWebcam);
+      document.getElementById('switchCameraButton').addEventListener('click', switchCamera);
+    </script>
+ </body>
+</html>
